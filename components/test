@@ -1,0 +1,14 @@
+//
+//
+// // Create a voice in 4/4 and add the notes from above
+// var voices = [
+//     new VF.Voice({num_beats: 4,  beat_value: 4}).addTickables(notes),
+//     new VF.Voice({num_beats: 4,  beat_value: 4}).addTickables(notes2)]
+//
+// // Format and justify the notes to 400 pixels.
+// var formatter = new VF.Formatter().joinVoices(voices).format(voices, 400);
+//
+// // Render voices
+// voices.forEach(function(v) { v.draw(context, stave); })
+// lub
+// VF.Formatter.FormatAndDraw(context, stave, notes);
