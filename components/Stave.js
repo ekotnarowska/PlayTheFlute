@@ -17,7 +17,7 @@ const C2 = new VF.StaveNote({keys: ["c#/4"], duration: "q"});
 const notes = [C, D, E, F, G, A];
 
 
-const NotesButtons = ({notes}) => {
+const NotesButtons = ({notes, addToStave}) => {
 
     return (
         <>
@@ -25,7 +25,7 @@ const NotesButtons = ({notes}) => {
             <div>
                 {
                     notes.map((note, i) => {
-                        return <button key={i}>{note.keys}</button>
+                        return <button onClick={(e) => addToStave} key={i}>{note.keys}</button>
                     })
                 }
             </div>
@@ -36,7 +36,15 @@ const NotesButtons = ({notes}) => {
 
 const Stave = () => {
 
-    const [note, setNote] = useState('')
+    const [notesOnStave, setNotesOnStave] = useState([]);
+
+
+    const addToStave = (note) => {
+
+        setNotesOnStave([...notesOnStave, note])
+
+    }
+
 
     useEffect(() => {
 
@@ -57,18 +65,19 @@ const Stave = () => {
         // Connect it to the rendering context and draw!
         stave.setContext(context).draw();
 
+        //create notes
+        VF.Formatter.FormatAndDraw(context, stave, notesOnStave)
 
-        VF.Formatter.FormatAndDraw(context, stave, notes);
-
-    }, [])
+    });
 
 
     return (
         <>
-            <NotesButtons notes={notes}/>
+            <NotesButtons notes={notes} addToStave={addToStave}/>
             <div className="staveContainer" id="staveContainer"> </div>
         </>
     )
 }
+
 
 export default Stave;
