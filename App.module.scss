@@ -2,4 +2,21 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;;
 }
+
+
+
+
+.container {
+  margin: 0 auto;
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+}
+
