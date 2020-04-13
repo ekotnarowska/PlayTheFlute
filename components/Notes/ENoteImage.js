@@ -7,15 +7,15 @@ const Formatter = VF.Formatter;
 const Renderer = VF.Renderer;
 const StaveNote = VF.StaveNote;
 
-const CNoteImage = () => {
+const ENoteImage = () => {
 
     const [context, setContext] = useState(null);
     const [stave, setStave] = useState(null);
 
     useEffect(() => {
-        const cDiv = document.createElement("div");
-        const renderer = new Renderer(cDiv, Renderer.Backends.SVG);
-        document.querySelector('#cNote').appendChild(cDiv)
+        const eDiv = document.createElement("div");
+        const renderer = new Renderer(eDiv, Renderer.Backends.SVG);
+        document.querySelector('#eNote').appendChild(eDiv)
         renderer.resize(50, 60);
         const context = renderer.getContext();
         context.setFont('Montserrat', 6, '').setBackgroundFillStyle("#eed")
@@ -24,7 +24,7 @@ const CNoteImage = () => {
         // Connect it to the rendering context and draw!
         stave.setContext(context).draw();
         //create notes
-        VF.Formatter.FormatAndDraw(context, stave, [new StaveNote({keys: ["c/4"], duration: "q"})]);
+        VF.Formatter.FormatAndDraw(context, stave, [new StaveNote({keys: ["e/4"], duration: "q"})]);
         setContext(context);
         setStave(stave);
 
@@ -35,12 +35,12 @@ const CNoteImage = () => {
     return (
         <>
             <div className="notesBox">
-                <div className='note' id="cNote">
+                <div className='note' id="eNote">
                 </div>
-                <h4 className="noteTitle">C</h4>
+                <h4 className="noteTitle">E</h4>
             </div>
         </>
     )
 }
 
-export default CNoteImage
+export default ENoteImage

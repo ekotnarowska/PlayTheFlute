@@ -3,9 +3,14 @@ import styles from "./Stave.module.scss";
 import Vex from 'vexflow';
 import StartButton from "../Buttons/StartButton";
 import CNoteImage from "../Notes/CNoteImage";
+import DNoteImage from "../Notes/DNoteImage";
+import C2NoteImage from "../Notes/C2NoteImage";
+import ANoteImage from "../Notes/ANoteImage";
+import ENoteImage from "../Notes/ENoteImage";
+import FNoteImage from "../Notes/FNoteImage";
+import GNoteImage from "../Notes/GNoteImage";
 import NotesButtons from "../Buttons/NotesButtons";
 // import notes from "./NotesButtons";
-
 
 
 const VF = Vex.Flow;
@@ -21,7 +26,6 @@ const G = new StaveNote({keys: ["g/4"], duration: "q"});
 const A = new StaveNote({keys: ["a/4"], duration: "q"});
 const C2 = new StaveNote({keys: ["c#/4"], duration: "q"});
 const notes = [C, D, E, F, G, A];
-
 
 
 const Stave = () => {
@@ -54,20 +58,28 @@ const Stave = () => {
     useEffect(() => {
         console.log(notesOnStave);
         if (notesOnStave.length === 0) return;
-        let notes = notesOnStave.map(note => new StaveNote({clef: "treble",keys: note.keys, duration: note.duration}));
+        let notes = notesOnStave.map(note => new StaveNote({clef: "treble", keys: note.keys, duration: note.duration}));
         console.log(notes);
 
         Formatter.FormatAndDraw(context, stave, notes, {
-            auto_beam: true});
-
+            auto_beam: true
+        });
 
 
     }, [notesOnStave]);
     return (
         <>
-            <CNoteImage/>
+            <div className='notesContainer'>
+                <CNoteImage/>
+                <DNoteImage/>
+                <ENoteImage/>
+                <FNoteImage/>
+                <GNoteImage/>
+                <ANoteImage/>
+                <C2NoteImage/>
+            </div>
             <NotesButtons notes={notes} addToStave={addToStave}/>
-            <div className="staveContainer" id="staveContainer"> </div>
+            <div className="staveContainer" id="staveContainer"></div>
             <StartButton/>
         </>
     )
