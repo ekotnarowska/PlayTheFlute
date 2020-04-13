@@ -1,22 +1,20 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
-import Stave from "./components/Stave/Stave";
+import {HashRouter, BrowserRouter, Switch, Route, Link, NavLink} from "react-router-dom";
 import Header from "./components/Header/Header";
 import Flute from "./components/Flute/Flute"
 import styles from "./App.module.scss"
-import notes from "./components/Stave/Stave"
 
 
 const App = () => {
     return (
         <>
-            <div className='container'>
-                <div className="box top">
-                   <Header/>
-                    <Stave notes={notes}/>
-                </div>
-                <Flute/>
-            </div>
+            <HashRouter>
+                <>
+                    <Route exact path='/' component={Header}/>
+                    <Route path="/playing/flute" component={Flute}/>
+                </>
+            </HashRouter>
         </>
     )
 }
