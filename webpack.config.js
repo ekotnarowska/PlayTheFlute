@@ -63,7 +63,6 @@ module.exports = {
           'css-loader',
           // Compiles Sass to CSS
           'sass-loader',
-          "../node_modules/bulma/css/bulma.css",
         ],
       },
     ]

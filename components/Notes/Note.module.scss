@@ -1,0 +1,13 @@
+
+.noteContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.note {
+  display: block;
+}
+
+.noteTitle {
+  margin-top: 0;
+}
