@@ -1,6 +1,6 @@
 import React, {Component, useState, useEffect} from "react";
 import styles from "./Flute.module.scss";
-import fluteImage from "../../assets/Flute_4.png"
+import fluteImage from "../../assets/Flute_C.png"
 import SaveButton from "../Buttons/SaveButton";
 
 const Flute = () => {
