@@ -24,7 +24,7 @@ const C2NoteImage = () => {
         // Connect it to the rendering context and draw!
         stave.setContext(context).draw();
         //create notes
-        VF.Formatter.FormatAndDraw(context, stave, [new StaveNote({keys: ["c#/4"], duration: "q"})]);
+        VF.Formatter.FormatAndDraw(context, stave, [new StaveNote({keys: ["c##/4"], duration: "q"})]);
         setContext(context);
         setStave(stave);
 
