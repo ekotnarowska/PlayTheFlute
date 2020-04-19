@@ -2,13 +2,6 @@ import React, {Component, useState, useEffect} from "react";
 import styles from "./Stave.module.scss";
 import Vex from 'vexflow';
 import StartButton from "../Buttons/StartButton";
-import CNoteImage from "../Notes/CNoteImage";
-import DNoteImage from "../Notes/DNoteImage";
-import C2NoteImage from "../Notes/C2NoteImage";
-import ANoteImage from "../Notes/ANoteImage";
-import ENoteImage from "../Notes/ENoteImage";
-import FNoteImage from "../Notes/FNoteImage";
-import GNoteImage from "../Notes/GNoteImage";
 import NotesButtons from "../Buttons/NotesButtons";
 // import notes from "./NotesButtons";
 
@@ -65,19 +58,12 @@ const Stave = () => {
             auto_beam: true
         });
 
-
     }, [notesOnStave]);
+
+
     return (
         <>
-            <div className='notesContainer'>
-                <CNoteImage/>
-                <DNoteImage/>
-                <ENoteImage/>
-                <FNoteImage/>
-                <GNoteImage/>
-                <ANoteImage/>
-                <C2NoteImage/>
-            </div>
+
             <NotesButtons notes={notes} addToStave={addToStave}/>
             <div className="staveContainer" id="staveContainer"></div>
             <StartButton/>

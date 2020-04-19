@@ -1,12 +1,12 @@
 import React, {Component, useState, useEffect} from "react";
-import styles from "./NotesButtons.module.scss";
+import styles from "./SaveButton.module.scss";
 
 
 
 const SaveButton = () => {
 
     return (
-        <button className="button is-danger">Zapisz</button>
+        <button className="saveBtn">Zapisz</button>
     )
 
 }

@@ -1,0 +1,28 @@
+li {
+
+}
+
+.choseBtn {
+  display: block;
+  margin: 0 0 15px 15px;
+  text-decoration: none;
+  padding: 7px 12px;
+  border: 2px solid #f14668;
+  cursor: pointer;
+  width: 110px;
+  height: 30px;
+  background-color: #f14668;
+  color: white;
+  font-weight: 400;
+  font-size: 12px;
+  box-shadow: 0 5px 20px -5px rgba(#818181, .9);
+
+}
+
+.songItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}

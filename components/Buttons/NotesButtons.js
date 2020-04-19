@@ -1,7 +1,6 @@
 import React, {Component, useState, useEffect} from "react";
 import styles from "./NotesButtons.module.scss";
 import Stave from "../Stave/Stave"
-import CNoteImage from "../Notes/CNoteImage";
 import Vex from 'vexflow';
 
 const VF = Vex.Flow;

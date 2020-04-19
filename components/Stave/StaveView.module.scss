@@ -1,0 +1,26 @@
+.staveViewContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 60%;
+
+
+  div {
+
+    list-style: none;
+    display: flex;
+    margin: 15.1px 0 0 0;
+    padding: 0;
+
+      rect {
+        display: none;
+      }
+
+  }
+}
+.notesContainer {
+
+}
+
+
+

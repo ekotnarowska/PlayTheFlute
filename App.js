@@ -12,17 +12,21 @@ const App = () => {
 
 
     const openModal = () => {
-        setModalOpen(modalOpen)
+        setModalOpen(!modalOpen)
     };
+
+    const closeModal = () => {
+        setModalOpen(!modalOpen)
+    }
     return (
         <>
             <HashRouter>
                 <>
                     <Switch>
-                        <Route exact path='/' component={Header}/>
+                        <Route path="/" exact render={(props) => (<Header openModal={openModal} {...props}/>)} />
                         <Route path="/playing/flute" component={Flute}/>
                     </Switch>
-                    {modalOpen && <Modal/>}
+                    {modalOpen && <Modal closeModal={closeModal}/>}
                 </>
             </HashRouter>
         </>

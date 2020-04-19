@@ -1,0 +1,19 @@
+.noteImageBtn {
+
+  display: block;
+  width: 80px;
+  background-color: white;
+  font-family: "Montserrat";
+  border: none;
+  margin: 20px 0;
+
+
+
+  &:hover {
+    box-shadow: 0 5px 20px -5px rgba(#818181, .9);
+
+  }
+  rect {
+
+  }
+}

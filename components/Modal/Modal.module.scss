@@ -9,5 +9,24 @@
   background-color: white;
   box-shadow: 0 20px 40px -10px rgba(#818181, .5);
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 }
+
+.closeModalBtn {
+  display: block;
+  text-decoration: none;
+  padding: 7px 12px;
+  border: 2px solid #f14668;
+  cursor: pointer;
+  width: 120px;
+  background-color: #f14668;
+  color: white;
+  font-weight: 700;
+  font-size: 10px;
+  box-shadow: 0 5px 20px -5px rgba(#818181, .9);
+
+}
+
