@@ -13,25 +13,12 @@ const StaveNote = VF.StaveNote;
 const NotesImagesButtons = ({notesImages, notes, addChosenNotes}) => {
 
 
-    const [border, setBorder] = useState("none")
-
-    const handleMouseEnter = () => {
-        setBorder("grey")
-    };
-
-    const handleMouseLeave = () => {
-
-        setBorder("none")
-    };
-
     return (
         <>
             <div className='notesContainer'>
                 {
                     notes.map((note, i) => {
                         return <button onClick={() => addChosenNotes(note.key)}
-                                       onMouseEnter={handleMouseEnter}
-                                       onMouseLeave={handleMouseLeave}
                                        className="noteImageBtn" key={note.key}>{note.image}</button>
                     })
 
